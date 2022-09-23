@@ -2,11 +2,14 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument("a", type=str)
-parser.add_argument("b", type=str)
-parser.add_argument("c", type=str)
+parser.add_argument("number1", type=float)
+parser.add_argument("operator", type=str)
+parser.add_argument("number2", type=float)
 
 args = parser.parse_args()
 
-print(args)
-print(eval(args.a + args.b + args.c))
+if args.operator in ("+", "-", "*", "/"):
+    print(args)
+    print(eval(str(args.number1) + args.operator + str(args.number2)))
+else:
+    print("Not math symbol")
