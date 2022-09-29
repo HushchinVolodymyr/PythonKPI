@@ -25,16 +25,14 @@ def div(a, b):
     return a / b
 
 
-if args.operator in ("+", "-", "*", "/"):
-    if args.operator == "add":
-        print(add(args.first_number, args.second_number))
-    elif args.operator == "min":
-        print(min(args.first_number, args.second_number))
-    elif args.operator == "mult":
-        print(mult(args.first_number, args.second_number))
-    elif args.operator == "div":
-        print(div(args.first_number, args.second_number))
-    else:
-        print("Data eror")
+
+if args.operator == "add":
+    print(add(args.first_number, args.second_number))
+elif args.operator == "min":
+    print(min(args.first_number, args.second_number))
+elif args.operator == "mult":
+    print(mult(args.first_number, args.second_number))
+elif args.operator == "div":
+    print(div(args.first_number, args.second_number))
 else:
-    print("Not math symbol")
+    print("Data eror")
