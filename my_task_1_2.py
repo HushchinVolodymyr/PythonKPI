@@ -2,9 +2,9 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument("operator", type=str)
+parser.add_argument("first_operator", type=str)
 parser.add_argument("number", type=float)
-parser.add_argument("number", type=float)
+parser.add_argument("second_number", type=float)
 
 args = parser.parse_args()
 
@@ -33,6 +33,10 @@ elif args.operator == "min":
 elif args.operator == "mult":
     print(mult(args.first_number, args.second_number))
 elif args.operator == "div":
-    print(div(args.first_number, args.second_number))
+    if args.second_number == 0:
+        print("Сannot be divided by zero")
+    else:
+        print(div(args.first_number, args.second_number))
 else:
     print("Data eror")
+
