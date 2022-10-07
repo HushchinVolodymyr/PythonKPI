@@ -23,7 +23,7 @@ class Rational:
                     nod = el
             self.denominator = denominator / nod
         else:
-            print("Can`t divide on zero!")
+            print("Can`t divide on zero! set to default value 1!")
 
     def fractional_var(self, numerator, denominator):
         return str(self.numerator) + "/" + str(self.denominator)
